@@ -1,6 +1,7 @@
 import React from "react";
 import HeroImage from "../assets/heroImage.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import {Link} from 'react-scroll';
 
 const Home = () => {
   return (
@@ -17,13 +18,14 @@ const Home = () => {
           </p>
           <div>
             {/* adding group will help you to get a hover effect on the arrow icon while hoving on the button*/}
-            <button className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-800 to-blue-400 cursor-pointer">
+            <Link to="portfolio" smooth duration={500}
+             className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-800 to-blue-400 cursor-pointer">
                View My Projects
                 <span className="group-hover:rotate-90 duration-300">
                 <MdOutlineKeyboardArrowRight size={30} className="ml-1"/>
                 </span>
                
-            </button>
+            </Link>
           </div>
         </div>
         <div>
