@@ -1,9 +1,10 @@
+import NavBar from "./components/NavBar.jsx";
 
 
 function App() {
   return (
   <div>
-    <h1 className = "font-signature">Hello World</h1>
+   <NavBar/>
   </div>
   );
 }
