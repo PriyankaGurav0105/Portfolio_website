@@ -17,11 +17,11 @@ import FramerImage from "../assets/framer.jpg";
 
 const Technologies = () => {
   return (
-    <div className="w-full h-72 bg-gradient-to-b from-teal-900 to-teal-600 flex flex-row justify-center items-center text-neutral-200">
+    <div className="w-full h-72 bg-gradient-to-b to-zinc-200 flex flex-row justify-center items-center text-neutral-200">
       <div className="w-[80%] flex flex-col">
         <div className="flex space-y-2 flex-col text-center mb-14">
-          <span className="text-3xl font-bold">
-            Techologies I use on a daily bases.
+          <span className="text-3xl font-bold text-teal-950">
+            Techologies I use on a daily
           </span>
         </div>
         <Marquee>
