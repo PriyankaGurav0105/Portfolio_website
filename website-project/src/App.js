@@ -3,8 +3,10 @@ import NavBar from "./components/NavBar.jsx";
 import SocialLinks from "./components/SocialLinks.jsx";
 import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
-import Skills from "./components/Skills.jsx";
+// import Skills from "./components/Skills.jsx";
 import Contact from "./components/Contact.jsx";
+import Technologies from "./components/Technologies.jsx";
+
 
 // refere this website to make changes in this portfolio https://priyankaguravmyportfoliowebsite.framer.website/
 // follow the list of changes from the notebook
@@ -14,9 +16,10 @@ function App() {
   <div>
    <NavBar/>
    <Home/>
+   <Technologies/>
    <About/>
    <Projects/>
-   <Skills/>
+   {/* <Skills/> */}
    <Contact/>
 
    <SocialLinks/>

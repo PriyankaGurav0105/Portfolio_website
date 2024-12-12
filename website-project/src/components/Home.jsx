@@ -7,14 +7,14 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="w-full h-screen bg-gradient-to-b from-teal-300 to-teal-900 via-teal-600"
+      className="w-full h-screen bg-gradient-to-b from-zinc-200"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row ">
         <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl sm:text-7xl font-bold text-white">
+          <h2 className="text-4xl sm:text-7xl font-bold text-cyan-950">
             I'm a Web Developer.
           </h2>
-          <p className="text-black-500 py-4 max-w-md">
+          <p className="text-cyan-900 font-medium text-2xl py-4 max-w-md">
             I'm a fresher looking for opportunities. Currently, I love to work
             on web application using technologies like React, Tailwind, Next JS
             and MongoDB.
