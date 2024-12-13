@@ -16,114 +16,48 @@ import FigmaImage from "../assets/Figma.png";
 import FramerImage from "../assets/framer.jpg";
 
 const Technologies = () => {
-  return (
-    <div className="w-full h-72 bg-gradient-to-b to-zinc-200 flex flex-row justify-center items-center text-neutral-200">
-      <div className="w-[80%] flex flex-col">
-        <div className="flex space-y-2 flex-col text-center mb-14">
-          <span className="text-3xl font-bold text-teal-950">
-            Techologies I use on a daily
-          </span>
-        </div>
-        <Marquee>
-          <div className=" bg-black m-5 rounded-full flex space-x-9 p-4 cursor-pointer">
-            <img
-              src={HtmlImage}
-              alt=" my profile"
-              className="mx-auto w-2/3 md:w-16 opacity-90"
-            />
-          </div>
+  const images = [
+    { src: HtmlImage, alt: "HTML" },
+    { src: CssImage, alt: "CSS" },
+    { src: JSImage, alt: "JavaScript" },
+    { src: NodeImage, alt: "Node.js" },
+    { src: ReactImage, alt: "React" },
+    { src: ViteImage, alt: "Vite" },
+    { src: TailwindImage, alt: "Tailwind CSS" },
+    { src: NextjsImage, alt: "Next.js" },
+    { src: ExpressjsImage, alt: "Express.js" },
+    { src: BootstrapImage, alt: "Bootstrap" },
+    { src: MongodbImage, alt: "MongoDB" },
+    { src: FigmaImage, alt: "Figma" },
+    { src: FramerImage, alt: "Framer" },
+    { src: GithubImage, alt: "GitHub" },
+  ];
 
-          <div className=" bg-white m-5 rounded-full flex space-x-9 p-4 cursor-pointer">
-            <img
-              src={CssImage}
-              alt=" my profile"
-              className="mx-auto w-2/3 md:w-16 opacity-90"
-            />
-          </div>
-          <div className=" bg-black m-5 rounded-full flex space-x-9 p-4 cursor-pointer">
-            <img
-              src={JSImage}
-              alt=" my profile"
-              className="mx-auto w-2/3 md:w-16 opacity-90"
-            />
-          </div>
-          <div className=" bg-black m-5 rounded-full flex space-x-9 p-4 cursor-pointer">
-            <img
-              src={NodeImage}
-              alt=" my profile"
-              className="mx-auto w-2/3 md:w-16 opacity-90"
-            />
-          </div>
-          <div className=" bg-black m-5 rounded-full flex space-x-9 p-4 cursor-pointer">
-            <img
-              src={ReactImage}
-              alt=" my profile"
-              className="mx-auto w-2/3 md:w-16 opacity-90"
-            />
-          </div>
-          <div className=" bg-black m-5 rounded-full flex space-x-9 p-4 cursor-pointer">
-            <img
-              src={ViteImage}
-              alt=" my profile"
-              className="mx-auto w-2/3 md:w-16 opacity-90"
-            />
-          </div>
-          <div className=" bg-black m-5 rounded-full flex space-x-9 p-4 cursor-pointer">
-            <img
-              src={TailwindImage}
-              alt=" my profile"
-              className="mx-auto w-2/3 md:w-16 opacity-90"
-            />
-          </div>
-          <div className=" bg-black m-5 rounded-full flex space-x-9 p-4 cursor-pointer">
-            <img
-              src={NextjsImage}
-              alt=" my profile"
-              className="mx-auto w-2/3 md:w-16 opacity-90"
-            />
-          </div>
-          <div className=" bg-black m-5 rounded-full flex space-x-9 p-4 cursor-pointer">
-            <img
-              src={ExpressjsImage}
-              alt=" my profile"
-              className="mx-auto w-2/3 md:w-16 opacity-90"
-            />
-          </div>
-          <div className=" bg-black m-5 rounded-full flex space-x-9 p-4 cursor-pointer">
-            <img
-              src={BootstrapImage}
-              alt=" my profile"
-              className="mx-auto w-2/3 md:w-16 opacity-90"
-            />
-          </div>
-          <div className=" bg-black m-5 rounded-full flex space-x-9 p-4 cursor-pointer">
-            <img
-              src={MongodbImage}
-              alt=" my profile"
-              className="mx-auto w-2/3 md:w-16 opacity-90"
-            />
-          </div>
-          <div className=" bg-black m-5 rounded-full flex space-x-9 p-4 cursor-pointer">
-            <img
-              src={FigmaImage}
-              alt=" my profile"
-              className="mx-auto w-2/3 md:w-16 opacity-90"
-            />
-          </div>
-          <div className=" bg-black m-5 rounded-full flex space-x-9 p-4 cursor-pointer">
-            <img
-              src={FramerImage}
-              alt=" my profile"
-              className="mx-auto w-2/3 md:w-16 opacity-90"
-            />
-          </div>
-          <div className=" bg-black m-5 rounded-full flex space-x-9 p-4 cursor-pointer">
-            <img
-              src={GithubImage}
-              alt=" my profile"
-              className="mx-auto w-2/3 md:w-16 opacity-90"
-            />
-          </div>
+  return (
+    <div name="technologies"
+     className="w-full bg-zinc-200 flex flex-col justify-center items-center py-8">
+      {/* Title */}
+      <div className="mb-6 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-teal-950">
+          Technologies I Use Daily
+        </h2>
+      </div>
+      
+      {/* Marquee */}
+      <div className="w-full max-w-6xl">
+        <Marquee className="overflow-hidden">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className="bg-black m-4 rounded-full flex items-center justify-center p-4 cursor-pointer transition-transform transform hover:scale-110"
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain opacity-90"
+              />
+            </div>
+          ))}
         </Marquee>
       </div>
     </div>
